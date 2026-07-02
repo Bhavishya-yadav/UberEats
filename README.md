@@ -3,6 +3,7 @@
 Link - https://github.com/mayankbansal93/lld-food-delivery-zomato-swiggy
 
 ## Requirements
+```
 Restaurant can register themselves.
 User can create, update, delete, get their profiles.
 User can search for the restaurant using restaurant name, city name.
@@ -14,3 +15,4 @@ User can apply the coupons. User can get the detailed bill containing tax detail
 User can made a payment using different modes of payment - credit card, wallet, etc.
 Delivery boy can get all the deliveries made by him using his Id.
 User can get the order status anytime. Success, Out for Delivery, Delivered, etc.
+```
