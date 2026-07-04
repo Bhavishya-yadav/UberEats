@@ -1,3 +1,4 @@
+package com.java;
 public class CuisineBasedFilter implements FiltersInterface {
     CuisineType cuisineType;
 

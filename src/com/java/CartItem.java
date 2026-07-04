@@ -1,3 +1,4 @@
+package com.java;
 public class CartItem {
     private FoodItem foodItem;
     private int quantity;

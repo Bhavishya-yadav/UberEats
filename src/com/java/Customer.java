@@ -1,3 +1,4 @@
+package com.java;
 import java.util.UUID;
 
 public class Customer {

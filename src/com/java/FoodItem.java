@@ -1,3 +1,4 @@
+package com.java;
 import java.util.UUID;
 
 public class FoodItem {
@@ -29,7 +30,7 @@ public class FoodItem {
     public boolean isVeg() {
         return isVeg;
     }
-    
+
     public int getPrice() {
         return price;
     }

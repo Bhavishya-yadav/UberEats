@@ -1,3 +1,4 @@
+package com.java;
 public class VegNonVegFilter implements FiltersInterface {
 
     boolean shouldShowVegItem;  
