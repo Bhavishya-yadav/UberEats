@@ -31,4 +31,12 @@ public class CartItem {
     public int getPriceOfCartItem() {
         return quantity*foodItem.getPrice();
     }
+
+    @Override
+    public String toString() {
+        return "Food: " + foodItem.getName() +
+            ", Quantity: " + quantity +
+            ", Price: ₹" + foodItem.getPrice() +
+            ", Total: ₹" + getPriceOfCartItem();
+    }
 }

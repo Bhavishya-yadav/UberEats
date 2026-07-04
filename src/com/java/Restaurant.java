@@ -53,4 +53,14 @@ public class Restaurant {
                                             }).toList();
         return foodItems;                                   
     }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "restaurantId='" + restaurantId + '\'' +
+                ", restaurantName='" + restaurantName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                ", foodMenu=" + foodMenu +
+                '}';
+    }
 }

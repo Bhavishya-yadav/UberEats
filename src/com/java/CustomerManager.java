@@ -33,4 +33,14 @@ public class CustomerManager {
         }
         return customersMap.get(customerId);
     }
+
+    public void addItemInCart(String customerId, FoodItem foodItem) throws Exception {
+        Customer customer = getCustomerById(customerId);
+        customer.getCart().addItemInCart(foodItem);
+    }
+
+    public void removeItemFromCart(String customerId, FoodItem foodItem) throws Exception {
+        Customer customer = getCustomerById(customerId);
+        customer.getCart().removeItemFromCart(foodItem);
+    }
 }

@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class RestaurantManager {
     Map<String, Restaurant> restaurantsMap;
@@ -45,5 +46,11 @@ public class RestaurantManager {
             System.out.println("No restaurants available in city!!!");
         }
         return cityToRestaurantsMap.get(city);
+    }
+
+    public Set<Restaurant> searchRestaurantByName(String restaurantName) {
+        return restaurantsMap.values().stream()
+        .filter(restaurant -> restaurant.getRestaurantName().contains(restaurantName))
+        .collect(Collectors.toSet());
     }
 }

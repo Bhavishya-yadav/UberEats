@@ -34,4 +34,15 @@ public class FoodItem {
     public int getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "FoodItem{" +
+                "foodItemId='" + foodItemId + '\'' +
+                ", name='" + name + '\'' +
+                ", cuisineType=" + type +
+                ", isVeg=" + isVeg +
+                ", price=" + price +
+                '}';
+    }
 }

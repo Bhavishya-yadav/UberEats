@@ -11,7 +11,7 @@ public class Customer {
         this.name = name;
         this.address = address;
         this.id = UUID.randomUUID().toString();
-        cart = null;
+        cart = new Cart();
     }
 
     public String getId() {
@@ -28,6 +28,10 @@ public class Customer {
 
     public Cart getCart() {
         return cart;
+    }
+
+    public void emptyCart() {
+        cart.emptyCart();
     }
     
 }

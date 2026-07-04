@@ -32,5 +32,18 @@ public class FoodMenu {
     public void removeItemInMenu(FoodItem item) throws Exception {
         this.foodItems.remove(item);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Menu ID : ").append(menuId).append("\n");
+        sb.append("Food Items:\n");
+
+        for (FoodItem item : foodItems) {
+            sb.append(item).append("\n");
+        }
+
+        return sb.toString();
+    }
   
 }
