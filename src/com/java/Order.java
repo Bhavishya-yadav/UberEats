@@ -8,14 +8,17 @@ public class Order {
     String customerId;
     String restaurantId;
     int orderAmount;
+    String customerAddress;
     OrderStatus orderStatus;
 
-    public Order(List<CartItem> orderItems, String customerId, String restaurantId, int orderAmount) {
+
+    public Order(List<CartItem> orderItems, String customerId, String restaurantId, int orderAmount, String customerAddress) {
         this.orderId = UUID.randomUUID().toString();
         this.orderItems = orderItems;
         this.restaurantId = restaurantId;
         this.customerId = customerId;
         this.orderAmount = orderAmount;
+        this.customerAddress = customerAddress;
         this.orderStatus = OrderStatus.SUCCESS;
     }
 
@@ -45,6 +48,10 @@ public class Order {
 
     public void updateOrderStatus(OrderStatus status) {
         this.orderStatus = status;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
     }
     
     

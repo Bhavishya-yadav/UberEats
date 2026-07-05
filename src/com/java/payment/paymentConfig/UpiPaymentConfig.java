@@ -1,4 +1,4 @@
-package com.java.payment;
+package com.java.payment.paymentConfig;
 
 public class UpiPaymentConfig extends PaymentConfig{
     private String upiId;

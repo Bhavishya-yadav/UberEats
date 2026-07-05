@@ -1,16 +1,19 @@
 package com.java;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.java.payment.PaymentMode;
+import com.java.payment.paymentConfig.CashConfig;
+import com.java.payment.paymentConfig.UpiPaymentConfig;
+import com.java.payment.paymentEnum.PaymentMode;
 
-public class UberEatsApplication {
 
-    private static final CustomerManager customerManager = new CustomerManager();
-    private static final RestaurantManager restaurantManager = new RestaurantManager();
-    private static final OrderManager orderManager = new OrderManager();
+public class UberEatsFEApplication {
+
+    private static final CustomerManager customerManager = CustomerManager.getInstance();
+    private static final RestaurantManager restaurantManager = RestaurantManager.getInstance();
+
+    private static final UberEatsOrderAndPaymentOrchestrator orderPaymentOrchestrator = new UberEatsOrderAndPaymentOrchestrator();
     public static void main(String[] args) throws Exception {
 
         // -------------------- Register Restaurants --------------------
@@ -141,33 +144,33 @@ public class UberEatsApplication {
         // bill.printBill();
 
 
-        // // -------------------- Place Order using UPI --------------------
+        // -------------------- Place Order using UPI --------------------
 
-        // driver.placeOrder(
-        //         cart1,
-        //         PaymentMode.UPI,
-        //         new UpiPaymentDetails("bhavishya@oksbi")
-        // );
+        String orderId1 = orderPaymentOrchestrator.handleOrderAndPayment(customer1.getCart(), customer1.getId(), dominos.getRestaurantId(), "Company Bagh, Rewari, Haryana", PaymentMode.UPI, new UpiPaymentConfig("bhavishya@axl"));
 
 
         // // -------------------- Customer2 Cart --------------------
 
         // Cart cart2 = new Cart();
 
-        // FoodItem chole = haldiram.getFoodItemByName("Chole Bhature");
+        FoodItem choleBhature = haldiram.getFilteredFoodItems(List.of(new FoodNameFilter("Chole Bhature"))).getFirst();
 
-        // cart2.addItemInCart(chole);
+        customerManager.addItemInCart(customer2.getId(), choleBhature);
 
-        // cart2.getAllItems();
+        System.out.println("----------------------START----------------------------");
+
+        System.out.println(customer2.getCart());
+
+        System.out.println("----------------------END----------------------------");
 
 
         // // -------------------- Place Order using Cash --------------------
 
-        // driver.placeOrder(
-        //         cart2,
-        //         PaymentMode.COD,
-        //         new CodPaymentDetails()
-        // );
+        String orderId2 = orderPaymentOrchestrator.handleOrderAndPayment(customer2.getCart(), customer2.getId(), haldiram.getRestaurantId(), "Yogi Ji's Kothi, Gorakhpur, Uttar Pradesh", PaymentMode.CASH, new CashConfig());
+
+        System.out.println(orderId2);
+
+        orderPaymentOrchestrator.collectCashOfCODOrder(orderId2);
 
 
         // // -------------------- Order History --------------------

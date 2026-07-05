@@ -3,14 +3,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OrderManager {
-    Map<String, Order> orderMap;
+    private Map<String, Order> orderMap;
+    private static OrderManager instance;
 
-    public OrderManager() {
+    private OrderManager() {
         orderMap = new HashMap<>();
     }
+
+    public static synchronized OrderManager getInstance() {
+        if(instance == null)
+            instance = new OrderManager();
+        return instance;
+    }
     
-    public void placeOrder(Order order) {
+    public Order placeOrder(Cart cart, String customerId, String restaurantId, String customerAddress) {
+        Order order = new Order(cart.getAllCartItemsInCart(), customerId, restaurantId, cart.getTotalCartAmount(), customerAddress);
         orderMap.put(order.getOrderId(), order);
+        return order;
     }
 
     public Order getOrderById(String orderId) throws Exception {
@@ -18,5 +27,16 @@ public class OrderManager {
             throw new Exception("No Such Order exist!!!");
         }
         return orderMap.get(orderId);
+    }
+
+    public boolean setOrderStatus(String orderId, OrderStatus orderStatus) {
+        try {
+            Order order = getOrderById(orderId);
+            order.updateOrderStatus(orderStatus);
+            return true;
+        } catch(Exception e) {
+            System.out.println("Error in setting up OrderStatus " + e.getMessage());
+            return false;
+        }
     }
 }

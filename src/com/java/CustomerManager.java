@@ -3,10 +3,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CustomerManager {
-    Map<String, Customer> customersMap;
+    private Map<String, Customer> customersMap;
 
-    public CustomerManager() {
+    private static CustomerManager instance;
+
+    private CustomerManager() {
         customersMap = new HashMap<>();
+    }
+
+    public static synchronized CustomerManager getInstance() {
+        if(instance == null)
+            instance = new CustomerManager();
+        return instance;
     }
     
     public void addCustomer(Customer customer) {

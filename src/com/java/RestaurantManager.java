@@ -6,12 +6,19 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RestaurantManager {
-    Map<String, Restaurant> restaurantsMap;
-    Map<String, Set<Restaurant>> cityToRestaurantsMap;
+    private Map<String, Restaurant> restaurantsMap;
+    private Map<String, Set<Restaurant>> cityToRestaurantsMap;
+    private static RestaurantManager instance;
 
-    public RestaurantManager() {
+    private RestaurantManager() {
         restaurantsMap = new HashMap<>();
         cityToRestaurantsMap = new HashMap<>();
+    }
+
+    public static synchronized RestaurantManager getInstance() {
+        if(instance == null)
+            instance = new RestaurantManager();
+        return instance;
     }
     
     public void addRestaurant(Restaurant restaurant) {

@@ -1,5 +1,6 @@
 package com.java;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -10,6 +11,10 @@ public class Cart {
     public Cart() {
         this.cartId = UUID.randomUUID().toString();
         this.foodItemToCartItemsMap = new HashMap<>();
+    }
+
+    public List<CartItem> getAllCartItemsInCart() {
+        return foodItemToCartItemsMap.values().stream().toList();
     }
 
     public boolean addItemInCart(FoodItem foodItem) {
@@ -33,6 +38,16 @@ public class Cart {
             foodItemToCartItemsMap.remove(foodItemId);
         }
         return true;
+    }
+
+    public int getTotalCartAmount() {
+        /*
+        Using reduce -> 
+        foodItemToCartItemsMap.values().stream().reduce(0, (sum, cartItem) -> sum + cartItem.getPriceOfCartItem(), Integer::sum);
+        */
+        return foodItemToCartItemsMap.values().stream()
+                                        .mapToInt(CartItem::getPriceOfCartItem)
+                                        .sum();
     }
 
     public void emptyCart() {

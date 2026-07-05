@@ -1,6 +1,9 @@
 package com.java.payment;
 import java.util.UUID;
 
+import com.java.payment.paymentEnum.PaymentMode;
+import com.java.payment.paymentEnum.PaymentStatus;
+
 public class Payment {
     private String paymentId;
     private String orderId;

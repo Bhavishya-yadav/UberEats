@@ -1,4 +1,7 @@
-package com.java.payment;
+package com.java.payment.paymentStrategy;
+
+import com.java.payment.Payment;
+
 public interface PaymentStrategy {
     
     public Payment processPayment(String orderId, int amount);

@@ -3,9 +3,27 @@ package com.java.payment;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.java.payment.paymentConfig.PaymentConfig;
+import com.java.payment.paymentEnum.PaymentMode;
+import com.java.payment.paymentEnum.PaymentStatus;
+import com.java.payment.paymentStrategy.PaymentStrategy;
+
 public class PaymentManager {
-    Map<String, Payment> paymentMap = new HashMap<>();
-    Map<String, Payment> orderIdToPaymentMap = new HashMap<>();
+    private Map<String, Payment> paymentMap;
+    private Map<String, Payment> orderIdToPaymentMap;
+    private static PaymentManager instance;
+
+    private PaymentManager() {
+        paymentMap = new HashMap<>();
+        orderIdToPaymentMap = new HashMap<>();
+    }
+
+    public static synchronized PaymentManager getInstance() {
+        if(instance == null) {
+            instance = new PaymentManager();
+        }
+        return instance;
+    }
 
     public boolean processPayment(String orderId, int amount, PaymentMode mode, PaymentConfig paymentConfig) {
 
