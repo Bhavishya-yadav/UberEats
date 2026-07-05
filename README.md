@@ -22,81 +22,158 @@ User can get the order status anytime. Success, Out for Delivery, Delivered, etc
 bhavyada@bhavyada-mac UberEats %  /usr/bin/env /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -XX:+ShowCodeDetails
 InExceptionMessages -cp /Users/bhavyada/Documents/FinalLLd/UberEats/bin com.java.app.UberEatsFEApplication 
 ----------------------START----------------------------
-[Restaurant{restaurantId='74acd17c-f862-41fc-bdd5-47ac93b5e017', restaurantName='Behrouz Biryani', cityName='Bangalore', foodMenu=Menu ID : 440608d4-df2d-4b89-8798-498ed6d52b43
+[Restaurant{restaurantId='2b5d29fa-3bb5-4318-bb8e-4d86cd6c69ca', restaurantName='Behrouz Biryani', cityName='Bangalore', foodMenu=Menu ID : 565df025-c27d-4f06-82af-5007b4fa9dd0
 Food Items:
-FoodItem{foodItemId='456e6e58-4a77-4d76-917e-e48c16856eca', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
-FoodItem{foodItemId='819e82e6-df80-4412-a10c-05e699131ce3', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
-}, Restaurant{restaurantId='d9bb3d52-e1ea-493d-8fc6-3f2d298496ec', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : c3771ab0-7c16-4185-9e86-59ca42e460be
+FoodItem{foodItemId='0eb69865-5303-4fdb-8027-5955afb4c513', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
+FoodItem{foodItemId='a794fb21-fb9b-42ec-80e9-3cce8281698d', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
+}, Restaurant{restaurantId='c0b9b478-adce-43ac-b319-b89237674788', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : 88fe88cf-f470-4c3e-9469-29c8d45467a4
 Food Items:
-FoodItem{foodItemId='b1a07fe0-80b7-497f-ae88-3377266affa9', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
-FoodItem{foodItemId='5872be0b-d3f4-447e-be3a-0211d244ed68', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
+FoodItem{foodItemId='d69b33ef-2edc-4b94-aa32-dc4bdcc6ec32', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='c31e676e-4db9-440f-b171-e31e0e784700', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
 }]
 ----------------------END----------------------------
 ----------------------START----------------------------
-[Restaurant{restaurantId='d9bb3d52-e1ea-493d-8fc6-3f2d298496ec', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : c3771ab0-7c16-4185-9e86-59ca42e460be
+[Restaurant{restaurantId='c0b9b478-adce-43ac-b319-b89237674788', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : 88fe88cf-f470-4c3e-9469-29c8d45467a4
 Food Items:
-FoodItem{foodItemId='b1a07fe0-80b7-497f-ae88-3377266affa9', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
-FoodItem{foodItemId='5872be0b-d3f4-447e-be3a-0211d244ed68', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
+FoodItem{foodItemId='d69b33ef-2edc-4b94-aa32-dc4bdcc6ec32', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='c31e676e-4db9-440f-b171-e31e0e784700', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
 }]
 ----------------------END----------------------------
 ----------------------START----------------------------
-Menu ID : c3771ab0-7c16-4185-9e86-59ca42e460be
+Menu ID : 88fe88cf-f470-4c3e-9469-29c8d45467a4
 Food Items:
-FoodItem{foodItemId='b1a07fe0-80b7-497f-ae88-3377266affa9', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
-FoodItem{foodItemId='5872be0b-d3f4-447e-be3a-0211d244ed68', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
+FoodItem{foodItemId='d69b33ef-2edc-4b94-aa32-dc4bdcc6ec32', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='c31e676e-4db9-440f-b171-e31e0e784700', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
 
 ----------------------END----------------------------
 ----------------------START----------------------------
-Menu ID : 440608d4-df2d-4b89-8798-498ed6d52b43
+Menu ID : 565df025-c27d-4f06-82af-5007b4fa9dd0
 Food Items:
-FoodItem{foodItemId='456e6e58-4a77-4d76-917e-e48c16856eca', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
-FoodItem{foodItemId='819e82e6-df80-4412-a10c-05e699131ce3', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
+FoodItem{foodItemId='0eb69865-5303-4fdb-8027-5955afb4c513', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
+FoodItem{foodItemId='a794fb21-fb9b-42ec-80e9-3cce8281698d', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
 
 ----------------------END----------------------------
 ----------------------START----------------------------
-[FoodItem{foodItemId='b1a07fe0-80b7-497f-ae88-3377266affa9', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}, FoodItem{foodItemId='5872be0b-d3f4-447e-be3a-0211d244ed68', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}]
+[FoodItem{foodItemId='d69b33ef-2edc-4b94-aa32-dc4bdcc6ec32', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}, FoodItem{foodItemId='c31e676e-4db9-440f-b171-e31e0e784700', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}]
 ----------------------END----------------------------
 ----------------------START----------------------------
-[FoodItem{foodItemId='819e82e6-df80-4412-a10c-05e699131ce3', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}]
+[FoodItem{foodItemId='a794fb21-fb9b-42ec-80e9-3cce8281698d', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}]
 ----------------------END----------------------------
 ----------------------START----------------------------
-Cart ID: 656ce008-9c99-4001-b520-990329f38e55
+Cart ID: f4f99355-2631-442c-8506-dda6493a57c5
 Items in Cart:
-Food: Veg Biryani, Quantity: 1, Price: ₹280, Total: ₹280
 Food: Farmhouse Pizza, Quantity: 1, Price: ₹350, Total: ₹350
+Food: Veg Biryani, Quantity: 1, Price: ₹280, Total: ₹280
 ---------------------------------
 Total Amount: ₹630
 ----------------------END----------------------------
 ----------------------START----------------------------
-Cart ID: 656ce008-9c99-4001-b520-990329f38e55
+Cart ID: f4f99355-2631-442c-8506-dda6493a57c5
 Items in Cart:
 Food: Farmhouse Pizza, Quantity: 1, Price: ₹350, Total: ₹350
 ---------------------------------
 Total Amount: ₹350
 ----------------------END----------------------------
+
+Bill for order
+Bill{cartAmount=350, discount=35.0, amountAfterDiscount=315.0, tax=15.75, finalBillAmount=330.75, coupons=[Coupon{couponCode='SAVE10', description='10% OFF', discountStrategy=com.java.strategy.coupon.PercentageDiscountStrategy@548a9f61}], taxes=[CGST, SGST]}
+
 Payment processing
 Payment done via UPI: bhavishya@axl
 Payment is successful!!! via UPI
 ----------------------START----------------------------
-
-Bill for order
-Bill{cartAmount=350, discount=35.0, amountAfterDiscount=315.0, tax=15.75, finalBillAmount=330.75, coupons=[Coupon{couponCode='SAVE10', description='10% OFF', discountStrategy=com.java.strategy.coupon.PercentageDiscountStrategy@28feb3fa}], taxes=[CGST, SGST]}
-
 ----------------------END----------------------------
 ----------------------START----------------------------
-Cart ID: 5600dcc5-8b33-4aba-b351-8ea63deae4c0
+Cart ID: 12746b64-bfd8-4fc0-812d-b00429cfdaf6
 Items in Cart:
 Food: Chole Bhature, Quantity: 1, Price: ₹180, Total: ₹180
 ---------------------------------
 Total Amount: ₹180
 ----------------------END----------------------------
+
+Bill for order
+Bill{cartAmount=180, discount=10.0, amountAfterDiscount=170.0, tax=8.5, finalBillAmount=178.5, coupons=[Coupon{couponCode='SAVE10', description='Flat ₹10 OFF', discountStrategy=com.java.strategy.coupon.FlatDiscountStrategy@59f99ea}], taxes=[CGST, SGST]}
+
 Payment will done via COD!!!
 Payment is successful!!! via CASH
 ----------------------START----------------------------
-
-Bill for order
-Bill{cartAmount=180, discount=10.0, amountAfterDiscount=170.0, tax=8.5, finalBillAmount=178.5, coupons=[Coupon{couponCode='SAVE10', description='Flat ₹10 OFF', discountStrategy=com.java.strategy.coupon.FlatDiscountStrategy@27efef64}], taxes=[CGST, SGST]}
+----------------------END----------------------------
+Cash collect for orderId: a7e43c9b-41db-4f33-a19a-56ea0c91a65c amount: 178
+bhavyada@bhavyada-mac UberEats %  cd /Users/bhavyada/Documents/FinalLLd/UberEats ; /usr/bin/env /Library/Java/JavaVirtualMachines/temurin-2
+1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -cp /Users/bhavyada/Documents/FinalLLd/UberEats/bin com.java.app.UberE
+atsFEApplication 
+----------------------START----------------------------
+[Restaurant{restaurantId='412ee19b-2ec5-4791-aa0d-df030404a2bf', restaurantName='Behrouz Biryani', cityName='Bangalore', foodMenu=Menu ID : 53efe9a5-e3b4-4535-9259-f0766275e1a7
+Food Items:
+FoodItem{foodItemId='050417ac-bfb7-4dc7-bf81-9bb840ac6f2f', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
+FoodItem{foodItemId='abc91128-b89f-4d3f-838b-8d171ff8b938', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
+}, Restaurant{restaurantId='9615179e-4576-4cf2-b735-8845e670445a', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : 271c0038-4cf3-48c1-8b56-1b8215187cab
+Food Items:
+FoodItem{foodItemId='10226132-8c3c-48a4-99be-a7f60913be2f', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='2f37b5b8-3b50-4432-b88a-a3d8d6d853bd', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
+}]
+----------------------END----------------------------
+----------------------START----------------------------
+[Restaurant{restaurantId='9615179e-4576-4cf2-b735-8845e670445a', restaurantName='Dominos', cityName='Bangalore', foodMenu=Menu ID : 271c0038-4cf3-48c1-8b56-1b8215187cab
+Food Items:
+FoodItem{foodItemId='10226132-8c3c-48a4-99be-a7f60913be2f', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='2f37b5b8-3b50-4432-b88a-a3d8d6d853bd', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
+}]
+----------------------END----------------------------
+----------------------START----------------------------
+Menu ID : 271c0038-4cf3-48c1-8b56-1b8215187cab
+Food Items:
+FoodItem{foodItemId='10226132-8c3c-48a4-99be-a7f60913be2f', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}
+FoodItem{foodItemId='2f37b5b8-3b50-4432-b88a-a3d8d6d853bd', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}
 
 ----------------------END----------------------------
-Cash collect for orderId: 82a7e897-a5d3-468b-a849-d09f807fa4f0 amount: 178
+----------------------START----------------------------
+Menu ID : 53efe9a5-e3b4-4535-9259-f0766275e1a7
+Food Items:
+FoodItem{foodItemId='050417ac-bfb7-4dc7-bf81-9bb840ac6f2f', name='Chicken Biryani', cuisineType=INDIAN, isVeg=false, price=400}
+FoodItem{foodItemId='abc91128-b89f-4d3f-838b-8d171ff8b938', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}
+
+----------------------END----------------------------
+----------------------START----------------------------
+[FoodItem{foodItemId='10226132-8c3c-48a4-99be-a7f60913be2f', name='Farmhouse Pizza', cuisineType=ITALIAN, isVeg=true, price=350}, FoodItem{foodItemId='2f37b5b8-3b50-4432-b88a-a3d8d6d853bd', name='Margherita Pizza', cuisineType=ITALIAN, isVeg=true, price=250}]
+----------------------END----------------------------
+----------------------START----------------------------
+[FoodItem{foodItemId='abc91128-b89f-4d3f-838b-8d171ff8b938', name='Veg Biryani', cuisineType=INDIAN, isVeg=true, price=280}]
+----------------------END----------------------------
+----------------------START----------------------------
+Cart ID: 3c3f2f07-5028-4e19-acdb-924e3cb578af
+Items in Cart:
+Food: Farmhouse Pizza, Quantity: 1, Price: ₹350, Total: ₹350
+Food: Veg Biryani, Quantity: 1, Price: ₹280, Total: ₹280
+---------------------------------
+Total Amount: ₹630
+----------------------END----------------------------
+----------------------START----------------------------
+Cart ID: 3c3f2f07-5028-4e19-acdb-924e3cb578af
+Items in Cart:
+Food: Farmhouse Pizza, Quantity: 1, Price: ₹350, Total: ₹350
+---------------------------------
+Total Amount: ₹350
+----------------------END----------------------------
+
+Bill for order
+Bill{cartAmount=350, discount=35.0, amountAfterDiscount=315.0, tax=15.75, finalBillAmount=330.75, coupons=[Coupon{couponCode='SAVE10', description='10% OFF', discountStrategy=com.java.strategy.coupon.PercentageDiscountStrategy@548a9f61}], taxes=[CGST, SGST]}
+
+Payment processing
+Payment done via UPI: bhavishya@axl
+Payment is successful!!! via UPI
+----------------------START----------------------------
+Cart ID: 5191d2bb-c078-45ba-8795-6e56df9b48a4
+Items in Cart:
+Food: Chole Bhature, Quantity: 1, Price: ₹180, Total: ₹180
+---------------------------------
+Total Amount: ₹180
+----------------------END----------------------------
+
+Bill for order
+Bill{cartAmount=180, discount=10.0, amountAfterDiscount=170.0, tax=8.5, finalBillAmount=178.5, coupons=[Coupon{couponCode='SAVE10', description='Flat ₹10 OFF', discountStrategy=com.java.strategy.coupon.FlatDiscountStrategy@59f99ea}], taxes=[CGST, SGST]}
+
+Payment will done via COD!!!
+Payment is successful!!! via CASH
+Cash collect for orderId: 629ab0dc-0e15-4c30-b3c8-32751d4fb9ec amount: 178
 ```
