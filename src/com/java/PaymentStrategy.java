@@ -1,6 +1,4 @@
-package com.java.payment.paymentStrategy;
-
-import com.java.payment.Payment;
+package com.java;
 
 public interface PaymentStrategy {
     

@@ -1,12 +1,7 @@
-package com.java.payment;
+package com.java;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.java.payment.paymentConfig.PaymentConfig;
-import com.java.payment.paymentEnum.PaymentMode;
-import com.java.payment.paymentEnum.PaymentStatus;
-import com.java.payment.paymentStrategy.PaymentStrategy;
 
 public class PaymentManager {
     private Map<String, Payment> paymentMap;

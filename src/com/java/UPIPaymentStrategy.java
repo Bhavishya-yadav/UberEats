@@ -1,8 +1,4 @@
-package com.java.payment.paymentStrategy;
-
-import com.java.payment.Payment;
-import com.java.payment.paymentEnum.PaymentMode;
-import com.java.payment.paymentEnum.PaymentStatus;
+package com.java;
 
 public class UPIPaymentStrategy implements PaymentStrategy {
 

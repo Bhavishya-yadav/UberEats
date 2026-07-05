@@ -3,10 +3,6 @@ package com.java;
 import java.util.List;
 import java.util.Set;
 
-import com.java.payment.paymentConfig.CashConfig;
-import com.java.payment.paymentConfig.UpiPaymentConfig;
-import com.java.payment.paymentEnum.PaymentMode;
-
 
 public class UberEatsFEApplication {
 

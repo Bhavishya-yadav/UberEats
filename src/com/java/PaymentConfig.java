@@ -1,4 +1,4 @@
-package com.java.payment.paymentConfig;
+package com.java;
 
 public abstract class PaymentConfig {
     

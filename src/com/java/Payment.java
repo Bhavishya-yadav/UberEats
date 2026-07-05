@@ -1,8 +1,5 @@
-package com.java.payment;
+package com.java;
 import java.util.UUID;
-
-import com.java.payment.paymentEnum.PaymentMode;
-import com.java.payment.paymentEnum.PaymentStatus;
 
 public class Payment {
     private String paymentId;

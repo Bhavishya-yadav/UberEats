@@ -1,4 +1,4 @@
-package com.java.payment.paymentEnum;
+package com.java;
 public enum PaymentStatus {
     PENDING,
     SUCCESS,

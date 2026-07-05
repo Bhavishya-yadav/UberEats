@@ -1,9 +1,5 @@
 package com.java;
 
-import com.java.payment.PaymentManager;
-import com.java.payment.paymentConfig.PaymentConfig;
-import com.java.payment.paymentEnum.PaymentMode;
-
 public class UberEatsOrderAndPaymentOrchestrator {
 
     OrderManager orderManager = OrderManager.getInstance();
