@@ -28,7 +28,7 @@ public class UberEatsOrderAndPaymentOrchestrator {
         // Adding taxes
         order.applyTax(TaxType.CGST);
         order.applyTax(TaxType.SGST);
-
+        orderManager.showBill(order.getOrderId());
         boolean isOrderAndPaymentSuccessful = paymentManager.processPayment(order.getOrderId(), cart.getTotalCartAmount(), paymentMode, paymentConfig);
         if(!isOrderAndPaymentSuccessful) {
             order.updateOrderStatus(OrderStatus.FAILED);
@@ -51,7 +51,7 @@ public class UberEatsOrderAndPaymentOrchestrator {
         }
     }
 
-    public void showBill(String orderId) {
-        orderManager.showBill(orderId);
-    }
+    // public void showBill(String orderId) {
+    //     orderManager.showBill(orderId);
+    // }
 }

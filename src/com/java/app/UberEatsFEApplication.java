@@ -168,13 +168,7 @@ public class UberEatsFEApplication {
         new FlatDiscountStrategy(10));
 
         String orderId1 = orderPaymentOrchestrator.handleOrderAndPayment(customer1.getCart(), customer1.getId(), dominos.getRestaurantId(), "Company Bagh, Rewari, Haryana", PaymentMode.UPI, new UpiPaymentConfig("bhavishya@axl"), List.of(tenPercenOffCoupon));
-
-
-        System.out.println("----------------------START----------------------------");
-
-        orderPaymentOrchestrator.showBill(orderId1);
-
-        System.out.println("----------------------END----------------------------");        
+     
 
 
         // // -------------------- Customer2 Cart --------------------
@@ -195,12 +189,6 @@ public class UberEatsFEApplication {
         // // -------------------- Place Order using Cash --------------------
 
         String orderId2 = orderPaymentOrchestrator.handleOrderAndPayment(customer2.getCart(), customer2.getId(), haldiram.getRestaurantId(), "Yogi Ji's Kothi, Gorakhpur, Uttar Pradesh", PaymentMode.CASH, new CashConfig(), List.of(flat10RupeeOffCoupon));
-
-        System.out.println("----------------------START----------------------------");
-
-        orderPaymentOrchestrator.showBill(orderId2);
-
-        System.out.println("----------------------END----------------------------");  
 
         orderPaymentOrchestrator.collectCashOfCODOrder(orderId2);
 
