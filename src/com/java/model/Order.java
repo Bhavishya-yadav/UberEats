@@ -3,24 +3,25 @@ import java.util.List;
 import java.util.UUID;
 
 import com.java.enums.OrderStatus;
+import com.java.enums.TaxType;
 
 public class Order {
     String orderId;
     List<CartItem> orderItems;
     String customerId;
     String restaurantId;
-    int orderAmount;
     String customerAddress;
     OrderStatus orderStatus;
+    Bill bill;
 
 
-    public Order(List<CartItem> orderItems, String customerId, String restaurantId, int orderAmount, String customerAddress) {
+    public Order(List<CartItem> orderItems, String customerId, String restaurantId, int cartAmount, String customerAddress) {
         this.orderId = UUID.randomUUID().toString();
         this.orderItems = orderItems;
         this.restaurantId = restaurantId;
         this.customerId = customerId;
-        this.orderAmount = orderAmount;
         this.customerAddress = customerAddress;
+        this.bill = new Bill(cartAmount);
         this.orderStatus = OrderStatus.SUCCESS;
     }
 
@@ -40,8 +41,8 @@ public class Order {
         return restaurantId;
     }
 
-    public int getOrderAmount() {
-        return orderAmount;
+    public int getFinalBillingAmount() {
+        return (int)bill.calculateFinalBill();
     }
 
     public OrderStatus getOrderStatus() {
@@ -55,6 +56,21 @@ public class Order {
     public String getCustomerAddress() {
         return customerAddress;
     }
+
+    public void applyCoupon(Coupon coupon) {
+        bill.addCoupon(coupon);
+    }
     
+    public void applyTax(TaxType tax) {
+        bill.addTax(tax);
+    }
+
+    public int getCartAmount() {
+        return bill.getCartAmount();
+    }
+
+    public Bill getBill() {
+        return bill;
+    }
     
 }

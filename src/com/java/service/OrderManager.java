@@ -43,4 +43,14 @@ public class OrderManager {
             return false;
         }
     }
+
+    public void showBill(String orderId) {
+        try {
+            Order order = getOrderById(orderId);
+            System.out.println("\nBill for order\n" + order.getBill() + "\n");
+        } catch(Exception e) {
+            System.out.println("Error in setting up OrderStatus " + e.getMessage());
+            
+        }
+    }
 }

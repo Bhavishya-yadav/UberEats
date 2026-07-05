@@ -7,12 +7,15 @@ import com.java.config.CashConfig;
 import com.java.config.UpiPaymentConfig;
 import com.java.enums.CuisineType;
 import com.java.enums.PaymentMode;
+import com.java.model.Coupon;
 import com.java.model.Customer;
 import com.java.model.FoodItem;
 import com.java.model.FoodMenu;
 import com.java.model.Restaurant;
 import com.java.service.CustomerManager;
 import com.java.service.RestaurantManager;
+import com.java.strategy.coupon.FlatDiscountStrategy;
+import com.java.strategy.coupon.PercentageDiscountStrategy;
 import com.java.strategy.filter.FoodNameFilter;
 import com.java.strategy.filter.VegNonVegFilter;
 
@@ -154,8 +157,24 @@ public class UberEatsFEApplication {
 
 
         // -------------------- Place Order using UPI --------------------
+        Coupon tenPercenOffCoupon = new Coupon(
+        "SAVE10",
+        "10% OFF",
+        new PercentageDiscountStrategy(10));
 
-        String orderId1 = orderPaymentOrchestrator.handleOrderAndPayment(customer1.getCart(), customer1.getId(), dominos.getRestaurantId(), "Company Bagh, Rewari, Haryana", PaymentMode.UPI, new UpiPaymentConfig("bhavishya@axl"));
+        Coupon flat10RupeeOffCoupon = new Coupon(
+        "SAVE10",
+        "Flat ₹10 OFF",
+        new FlatDiscountStrategy(10));
+
+        String orderId1 = orderPaymentOrchestrator.handleOrderAndPayment(customer1.getCart(), customer1.getId(), dominos.getRestaurantId(), "Company Bagh, Rewari, Haryana", PaymentMode.UPI, new UpiPaymentConfig("bhavishya@axl"), List.of(tenPercenOffCoupon));
+
+
+        System.out.println("----------------------START----------------------------");
+
+        orderPaymentOrchestrator.showBill(orderId1);
+
+        System.out.println("----------------------END----------------------------");        
 
 
         // // -------------------- Customer2 Cart --------------------
@@ -175,22 +194,15 @@ public class UberEatsFEApplication {
 
         // // -------------------- Place Order using Cash --------------------
 
-        String orderId2 = orderPaymentOrchestrator.handleOrderAndPayment(customer2.getCart(), customer2.getId(), haldiram.getRestaurantId(), "Yogi Ji's Kothi, Gorakhpur, Uttar Pradesh", PaymentMode.CASH, new CashConfig());
+        String orderId2 = orderPaymentOrchestrator.handleOrderAndPayment(customer2.getCart(), customer2.getId(), haldiram.getRestaurantId(), "Yogi Ji's Kothi, Gorakhpur, Uttar Pradesh", PaymentMode.CASH, new CashConfig(), List.of(flat10RupeeOffCoupon));
 
-        System.out.println(orderId2);
+        System.out.println("----------------------START----------------------------");
+
+        orderPaymentOrchestrator.showBill(orderId2);
+
+        System.out.println("----------------------END----------------------------");  
 
         orderPaymentOrchestrator.collectCashOfCODOrder(orderId2);
 
-
-        // // -------------------- Order History --------------------
-
-        // orderManager.getOrdersByCustomer(customer1.getId());
-
-        // orderManager.getOrdersByCustomer(customer2.getId());
-
-
-        // // -------------------- Cancel Order --------------------
-
-        // orderManager.cancelOrder("<order-id>");
     }
 }
